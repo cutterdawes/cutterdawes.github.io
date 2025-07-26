@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 40px;
+    background-color: #fff;
+    color: #333;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Align items to the center vertically */
+    justify-content: space-between; /* Pushes items to ends */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.text-content {
+    flex-grow: 1; /* Allows text content to take up available space */
+}
+
+.headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.links a {
+    color: #000; /* Changed to black */
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 1em; /* Reduced from 2em */
+    margin-bottom: 0.5em; /* Reduced from 1em */
+    /* Removed border-bottom: 1px solid #ccc; */
+    padding-bottom: 0.3em;
+}
+
+.paper p {
+    margin: 0;
+}
+
+.paper {
+    margin-bottom: 0.5em; /* Reduced from 1.5em */
+}
+
+.paper a {
+    color: #000; /* Changed to black */
+}
