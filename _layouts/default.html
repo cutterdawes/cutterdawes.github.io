@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>{{ site.title }}</h1>
+        <nav class="main-nav">
+            <a href="/" {% if page.url == '/' %}class="active"{% endif %}>About</a>
+            <a href="/blog/" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+        <!-- <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p> -->
+    </footer>
+</body>
+</html>

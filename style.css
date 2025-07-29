@@ -9,6 +9,31 @@ body {
     margin-right: auto;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.main-nav {
+    margin-bottom: 0;
+}
+
+.main-nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.main-nav a.active {
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
 .header-content {
     display: flex;
     align-items: center; /* Align items to the center vertically */
@@ -27,16 +52,24 @@ body {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+    transform: translateX(25px);
 }
 
 h1 {
     font-size: 2em;
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em; /* Reduced space below h1 */
 }
 
 p {
+    margin-top: 0; /* Ensure no extra space above paragraphs */
     margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.2em; /* Reduced space below h2 */
 }
 
 .links a {
@@ -49,17 +82,7 @@ p {
     text-decoration: underline;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-top: 1em; /* Reduced from 2em */
-    margin-bottom: 0.5em; /* Reduced from 1em */
-    /* Removed border-bottom: 1px solid #ccc; */
-    padding-bottom: 0.3em;
-}
 
-.paper p {
-    margin: 0;
-}
 
 .paper {
     margin-bottom: 0.5em; /* Reduced from 1.5em */
@@ -67,4 +90,47 @@ h2 {
 
 .paper a {
     color: #000; /* Changed to black */
+    text-decoration: underline; /* Ensure it's underlined */
+    font-size: 1em; /* Normal text size */
+}
+
+.post-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.post-list li {
+    margin-bottom: 1.5em; /* Add some space between posts */
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5em; /* Space between header and content */
+}
+
+.post-header h2 {
+    font-size: 1em; /* Normal text size */
+    margin-top: 0; /* Remove default h2 top margin */
+    margin-bottom: 0; /* Remove default h2 bottom margin */
+}
+
+.post-list .post-link {
+    color: #000; /* Make blog titles black */
+    text-decoration: underline; /* Always underlined */
+}
+
+.post-list .post-link:hover {
+    text-decoration: underline; /* Keep underline on hover */
+}
+
+.post-meta {
+    white-space: nowrap; /* Prevent date from wrapping */
+    font-size: 0.9em;
+    color: #555;
+}
+
+.post-content {
+    text-align: justify;
 }
