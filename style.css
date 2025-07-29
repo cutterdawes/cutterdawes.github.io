@@ -52,7 +52,7 @@ header {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    transform: translateX(25px);
+    transform: translateX(25px) translateY(-20px);
 }
 
 h1 {
@@ -134,3 +134,42 @@ h2 {
 .post-content {
     text-align: justify;
 }
+
+figure {
+  margin: 20px auto; /* Centers the figure horizontally */
+  text-align: center;
+  max-width: 100%;
+}
+
+figure img {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.figure-50 img {
+  width: 50%;
+}
+
+.figure-75 img {
+  width: 75%;
+}
+
+.figure-100 img {
+  width: 100%;
+}
+
+a img {
+  border: none;
+  text-decoration: none;
+}
+
+a {
+    color: #000;
+}
+
+
+

@@ -16,3 +16,4 @@ permalink: /blog/:year-:month-:day-:title/
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from

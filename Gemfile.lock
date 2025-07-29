@@ -294,6 +294,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.17)
+  jekyll-redirect-from (~> 0.16)
   webrick (~> 1.9)
 
 BUNDLED WITH
