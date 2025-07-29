@@ -26,15 +26,15 @@ Nicely, semantic classes correspond to clusters in the embedding space.
 It is intuitive that a model would confabulate for questions which it has not seen as much in its training distribution.
 To probe this relationship, I estimated the log-probability of the question and looked at its correlation to the semantic entropy of the answer
 Unfortunately, there was little correlation between the two.
-To reduce the computational overhead necessary for measuring semantic entropy while retaining its predictiveness for confabulations, others have tried training a linear probe on the embeddings to predict the semantic entropy
-I reproduced these results, which demonstrate limited effectiveness; they surpass other methods but do not match semantic entropy
-Finally, I experimented with steering the model using a “semantic entropy steering vector”, estimated as the difference between the embeddings corresponding to answers which exceeded a semantic entropy threshold and those that did not
-Concretely, we modified final-layer activations to be  a - vSE , where a are the original activations, λ a tunable magnitude parameter, and vSE  the steering vector
-Interestingly, the model began to refuse to answer (simply outputting the stop token) as λ increased
-It also seemed that answers became more nonsensical beyond a certain threshold of λ
-We measured the accuracy and refusal rate among the 500 examples, varying [0:10]; we noticed a “phase transition” in both accuracy and refusal rates, as shown below
+To reduce the computational overhead necessary for measuring semantic entropy while retaining its predictiveness for confabulations, others have tried training a linear probe on the embeddings to predict the semantic entropy.
+I reproduced these results, which demonstrate limited effectiveness; they surpass other methods but do not match semantic entropy.
+Finally, I experimented with steering the model using a “semantic entropy steering vector”, estimated as the difference between the embeddings corresponding to answers which exceeded a semantic entropy threshold and those that did not.
+Concretely, we modified final-layer activations to be $a - \lambda v_{SE}$, where $a$ are the original activations, $\lambda$ a tunable magnitude parameter, and $v_{SE}$ the steering vector.
+Interestingly, the model began to refuse to answer (simply outputting the stop token) as $\lambda$ increased.
+It also seemed that answers became more nonsensical beyond a certain threshold of $\lambda$.
+We measured the accuracy and refusal rate among the 500 examples, varying $\lambda \in [0:10]$; we noticed a “phase transition” in both accuracy and refusal rates, as shown below.
 
-We introduced a third measure, which we call the “non-refused accuracy”, and measures the accuracy on questions that the model does not refuse to answer; we also plot this above
+We introduced a third measure, which we call the “non-refused accuracy”, and measures the accuracy on questions that the model does not refuse to answer; we also plot this above.
 
 ### Future Directions
 Extend to all 15k examples in the TriviaQA dataset
