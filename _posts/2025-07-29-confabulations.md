@@ -8,7 +8,7 @@ snippet: "A brief look at how semantic entropy can be used to detect and reduce 
 ---
 
 Despite their remarkable fluency, large language models can produce confident yet incorrect outputs—so-called *confabulations*, a subset of hallucinations that involve false statements which are sensitive to random seed variations.
-In "Detecting Hallucinations in Large Language models using Semantic Entropy" (Farquhar et al., 2024), they introduce "semantic entropy", a metric that captures a model's uncertainty about the meaning of its responses.
+In "Detecting Hallucinations in Large Language models using Semantic Entropy" ([Farquhar et al., 2024](https://www.nature.com/articles/s41586-024-07421-0)), they introduce "semantic entropy", a metric that captures a model's uncertainty about the meaning of its responses.
 In this post, I explore how to use it to both detect and reduce such failures through a variety of methods including targeted steering interventions.
 
 ### 1. Background
@@ -58,7 +58,7 @@ To test this, I estimated the log-probability of each question and examined its 
 
 #### 2.3. Semantic Entropy Linear Probe
 
-Given that semantic entropy is expensive to compute, prior work (Kossen et al., 2024) has proposed training a linear probe to predict it directly from internal embeddings.
+Given that semantic entropy is expensive to compute, prior work ([Kossen et al., 2024](https://arxiv.org/pdf/2406.15927)) has proposed training a linear probe to predict it directly from internal embeddings.
 I replicated this approach and found that while such probes outperform baseline heuristics, their predictive power still falls short of using true semantic entropy.
 
 #### 2.4. Semantic Entropy Steering Vector
@@ -89,4 +89,3 @@ Several avenues remain for deeper investigation:
 - Re-estimate the steering vector using the full labeled dataset and explore more nuanced ways to group responses into semantic classes.
 - Experiment with applying the steering vector at other layers (or across multiple layers) of the model.
 - Conduct a more fine-grained search over the magnitude parameter $\lambda$ to better characterize the transition dynamics and optimal operating points.
-
