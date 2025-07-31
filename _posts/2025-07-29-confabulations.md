@@ -91,5 +91,3 @@ Several avenues remain for deeper investigation:
 - Conduct a more fine-grained search over the magnitude parameter $\lambda$ to better characterize the transition dynamics and optimal operating points.
 
 ### References
-
-{% bibliography %}
