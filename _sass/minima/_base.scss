@@ -1,0 +1,33 @@
+@use "sass:color";
+
+// These are the problematic lines from minima's _base.scss
+// I'm only including the lines that cause deprecation warnings.
+// You might need to add more content from the original _base.scss if other styles are missing.
+
+// Line 18: $grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
+
+// Line 19: $grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color-dark:  color.adjust($grey-color, $lightness: -25%) !default;
+
+// Line 110: color: darken($brand-color, 15%);
+// This is within a rule, so I'm just providing the corrected line.
+// You might need to copy the entire rule from the original _base.scss if this doesn't work.
+// For example:
+// a {
+//   color: color.adjust($brand-color, $lightness: -15%);
+// }
+
+// Line 235: color: lighten($text-color, 18%);
+// Similar to above, this is within a rule.
+// For example:
+// .site-footer {
+//   color: color.adjust($text-color, $lightness: 18%);
+// }
+
+// Line 240: background-color: lighten($grey-color-light, 6%);
+// Similar to above, this is within a rule.
+// For example:
+// .highlight {
+//   background-color: color.adjust($grey-color-light, $lightness: 6%);
+// }
