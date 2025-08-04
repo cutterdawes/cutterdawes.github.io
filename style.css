@@ -1,3 +1,4 @@
+/* --- General Styles --- */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -9,6 +10,46 @@ body {
     margin-right: auto;
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 1.3em;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+.post-content h3 {
+    font-size: 1.1em;
+}
+
+.post-content h4 {
+    font-size: 1em;
+}
+
+
+/* --- Header & Navigation --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -22,7 +63,7 @@ header {
 
 .main-nav a {
     margin-left: 15px;
-    text-decoration: none;
+    font-size: 1.1em;
     color: #000;
 }
 
@@ -30,103 +71,95 @@ header {
     font-weight: bold;
 }
 
-.main-nav a:hover {
-    text-decoration: underline;
-}
 
+/* --- About Page --- */
 .header-content {
     display: flex;
-    align-items: center; /* Align items to the center vertically */
-    justify-content: space-between; /* Pushes items to ends */
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
     margin-bottom: 20px;
 }
 
 .text-content {
-    flex-grow: 1; /* Allows text content to take up available space */
+    flex-grow: 1;
 }
 
 .headshot {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    transform: translateX(25px) translateY(-25px);
-}
-
-h1 {
-    font-size: 2em;
-    margin-top: 0;
-    margin-bottom: 0.2em; /* Reduced space below h1 */
-}
-
-p {
-    margin-top: 0; /* Ensure no extra space above paragraphs */
-    margin-bottom: 1em;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 0.2em; /* Reduced space below h2 */
+    transform: translateX(35px) translateY(-20px);
 }
 
 .links a {
-    color: #000; /* Changed to black */
-    text-decoration: none;
     margin-right: 10px;
+    color: #000;
 }
-
-.links a:hover {
-    text-decoration: underline;
-}
-
-
 
 .paper {
-    margin-bottom: 0.5em; /* Reduced from 1.5em */
+    margin-bottom: 0.5em;
 }
 
 .paper a {
-    color: #000; /* Changed to black */
-    text-decoration: underline; /* Ensure it's underlined */
-    font-size: 1em; /* Normal text size */
+    font-style: italic;
+    color: #000;
 }
 
-.post-list {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0;
+
+/* --- Blog List Page --- */
+ul.posts {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.post-list li {
-    margin-bottom: 1.5em; /* Add some space between posts */
+ul.posts li {
+  margin-bottom: 1.5em;
 }
 
-.post-header {
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.post-item a {
+    font-style: italic;
+    color: #000;
+}
+
+#tag-filter {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.tag-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.tag-button.active {
+  font-weight: bold;
+}
+
+.tag-button:hover {
+  text-decoration: underline;
+}
+
+
+/* --- Single Blog Post --- */
+.post-meta {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5em; /* Space between header and content */
-}
-
-.post-header h2 {
-    font-size: 1em; /* Normal text size */
-    margin-top: 0; /* Remove default h2 top margin */
-    margin-bottom: 0; /* Remove default h2 bottom margin */
-}
-
-.post-list .post-link {
-    color: #000; /* Make blog titles black */
-    text-decoration: underline; /* Always underlined */
-}
-
-.post-list .post-link:hover {
-    text-decoration: underline; /* Keep underline on hover */
-}
-
-.post-meta {
-    white-space: nowrap; /* Prevent date from wrapping */
+    white-space: nowrap;
     font-size: 0.9em;
     color: #555;
 }
@@ -135,14 +168,26 @@ h2 {
     text-align: justify;
 }
 
+.tags {
+  margin-top: 20px;
+}
+
+.tag {
+  display: inline-block;
+  font-style: italic;
+  margin-right: 5px;
+  font-size: 0.9em;
+}
+
+/* --- Figures & Images --- */
 figure {
-  margin: 20px auto; /* Centers the figure horizontally */
+  margin: 20px auto;
   text-align: center;
   max-width: 100%;
 }
 
 figure img {
-  max-width: 100%; /* Ensures the image is responsive */
+  max-width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -161,15 +206,3 @@ figure img {
 .figure-100 img {
   width: 100%;
 }
-
-a img {
-  border: none;
-  text-decoration: none;
-}
-
-a {
-    color: #000;
-}
-
-
-

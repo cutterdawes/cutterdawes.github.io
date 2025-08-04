@@ -5,6 +5,7 @@ date: 2025-07-30 10:00:00 -0400
 categories: [general]
 mathjax: true
 snippet: "A brief look at how semantic entropy can be used to detect and reduce confabulations in LLMs."
+tags: [Research]
 ---
 
 Despite their remarkable fluency, large language models can produce confident yet incorrect outputs—so-called *confabulations*, a subset of hallucinations that involve false statements which are sensitive to random seed variations.
