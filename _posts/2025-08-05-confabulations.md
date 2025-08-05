@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reducing Confabulation with Semantic Entropy Steering Vectors"
-date: 2025-07-30 10:00:00 -0400
+date: 2025-08-05
 categories: [general]
 mathjax: true
 snippet: "A brief look at how semantic entropy can be used to detect and reduce confabulations in LLMs."
