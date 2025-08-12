@@ -156,6 +156,14 @@ ul.posts li {
 
 
 /* --- Single Blog Post --- */
+.post-title {
+    margin-top: 0;
+}
+
+.post {
+    margin-top: 0;
+}
+
 .post-meta {
     display: flex;
     justify-content: space-between;
