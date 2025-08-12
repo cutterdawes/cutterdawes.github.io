@@ -206,3 +206,73 @@ figure img {
 .figure-100 img {
   width: 100%;
 }
+
+/* --- Mobile Styles --- */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 20px;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-wrapper.active .main-nav {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-wrapper {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .nav-wrapper.active {
+        display: block;
+    }
+
+    .main-nav a {
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0;
+    }
+
+    .headshot {
+        transform: none;
+        margin-bottom: 20px;
+    }
+}

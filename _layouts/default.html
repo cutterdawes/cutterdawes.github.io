@@ -11,10 +11,17 @@
 <body>
     <header>
         <h1>{{ site.title }}</h1>
-        <nav class="main-nav">
-            <a href="/" {% if page.url == '/' or page.url == '/about/' %}class="active"{% endif %}>About</a>
-            <a href="/blog/" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
-        </nav>
+        <button class="hamburger-menu" aria-label="Open navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="nav-wrapper">
+            <nav class="main-nav">
+                <a href="/" {% if page.url == '/' or page.url == '/about/' %}class="active"{% endif %}>About</a>
+                <a href="/blog/" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -25,5 +32,16 @@
         <!-- Footer content -->
         <!-- <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p> -->
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navWrapper = document.querySelector('.nav-wrapper');
+
+            hamburger.addEventListener('click', function() {
+                navWrapper.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
