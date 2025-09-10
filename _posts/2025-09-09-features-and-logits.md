@@ -20,6 +20,7 @@ I compare these steepness measurements to the metrics in TA; see the figure belo
 Notice the inverse relationship between the local steepness (y-axis in scatterplot) and the counterfactual importance (x-axis; one of the probabilistic metrics from TA).
 This inverse relationship is visible in many of the figures shown in this post: collectively, they suggest that activations in locally flat regions of latent space tend to be more important to downstream computation.
 These relationships, though preliminary, add to recent indications that geometric properties of latent space play a potentially significant role in the downstream thought process.
+
 Code for this project is available at [``github.com/cutterdawes/SteeringThoughtAnchors``](https://github.com/cutterdawes/SteeringThoughtAnchors/tree/main).
 
 <figure class="figure-100">
