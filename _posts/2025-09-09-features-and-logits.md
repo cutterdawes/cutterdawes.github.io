@@ -4,7 +4,6 @@ title: "Features and Logits: Bridging the Gap"
 date: 2025-09-09
 mathjax: true
 snippet: "A preliminary investigation into connections between latent space steepness and downstream computation."
-tags: [Research]
 ---
 
 An underappreciated fact about large language models (LLMs) is that they are at once two separate things: (i) a representation machine, in which the fundamental objects are features in a geometrically complex latent space; and (ii) a probabilistic model, in which the fundamental objects are logits corresponding to a probability distribution over language.

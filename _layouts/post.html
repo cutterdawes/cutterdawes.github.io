@@ -2,13 +2,10 @@
 layout: default
 ---
 <div>
-    <h2 class="post-title">{{ page.title }}</h2>
-    <p class="post-meta">
-      {% if page.tags.size > 0 %}
-        {{ page.tags | join: ", " }}
-      {% endif %}
+    <div class="post-header">
+      <h2 class="post-title">{{ page.title }}</h2>
       <span class="post-date">{{ page.date | date: "%b %-d, %Y" }}</span>
-    </p>
+    </div>
 
     <div class="post-content">
     {{ content }}

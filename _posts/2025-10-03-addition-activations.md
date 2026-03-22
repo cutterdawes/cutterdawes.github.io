@@ -4,7 +4,6 @@ title: "RNNs Add Using a Helix"
 date: 2025-10-03
 mathjax: true
 snippet: "The first part in a series applying interpretability methods to my bachelor's thesis."
-tags: [Research]
 ---
 
 The human brain still distinguishes itself from the most advanced artificial neural networks by its ability to radically generalize---to extrapolate far beyond the training distribution, in such a way that requires not just surface correlations but deeper understanding.

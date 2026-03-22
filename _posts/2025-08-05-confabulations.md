@@ -4,7 +4,6 @@ title: "Reducing Confabulation with Semantic Entropy Steering Vectors"
 date: 2025-08-05
 mathjax: true
 snippet: "A brief look at how semantic entropy can be used to detect and reduce confabulations in LLMs."
-tags: [Research]
 ---
 
 Despite their remarkable fluency, large language models can produce confident yet incorrect outputs—so-called *confabulations*, a subset of hallucinations that involve false statements which are sensitive to random seed variations.
