@@ -11,12 +11,12 @@
 <body>
     <header>
         <h1>{{ site.title }}</h1>
-        <button class="hamburger-menu" aria-label="Open navigation menu">
+        <button class="hamburger-menu" aria-label="Toggle navigation menu" aria-controls="site-nav" aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper" id="site-nav">
             <nav class="main-nav">
                 <a href="/" {% if page.url == '/' or page.url == '/about/' %}class="active"{% endif %}>About</a>
                 <a href="/blog/" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a>
@@ -37,9 +37,32 @@
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger-menu');
             const navWrapper = document.querySelector('.nav-wrapper');
+            const toggleNavigation = function(forceOpen) {
+                const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !navWrapper.classList.contains('active');
+                navWrapper.classList.toggle('active', shouldOpen);
+                hamburger.setAttribute('aria-expanded', String(shouldOpen));
+            };
 
             hamburger.addEventListener('click', function() {
-                navWrapper.classList.toggle('active');
+                toggleNavigation();
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!navWrapper.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleNavigation(false);
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    toggleNavigation(false);
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    toggleNavigation(false);
+                }
             });
         });
     </script>
